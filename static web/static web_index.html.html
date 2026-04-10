@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO essentials -->
+  <meta name="description" content="Carnton Builders — Professional construction and transport services in Kaoma, Western Province, Zambia. Reliable building, material delivery, and logistics.">
+  <meta name="keywords" content="construction, transport, Kaoma, Zambia, Carnton Builders, building contractor, logistics, Carlos Antonio">
+  <meta name="author" content="CARLOS ANTONIO">
+  <title>Carnton Builders | Construction & Transport · Kaoma, Zambia</title>
+  <style>
+    /* ---------- RESET & BUSINESS FONTS ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      color: #1e1e1e;
+      background: #ffffff;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3 {
+      font-weight: 600;
+      line-height: 1.2;
+      color: #1a2a3a;
+    }
+    h1 {
+      font-size: 2.2rem;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #c49a2b; /* subtle gold accent */
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    /* ---------- HEADER / LOGO ---------- */
+    .header-main {
+      background: #0f1c26; /* dark navy — professional */
+      color: white;
+      padding: 1.5rem 2rem;
+      border-bottom: 4px solid #c49a2b;
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo-img {
+      width: 80px;
+      height: 80px;
+      border: 2px solid #c49a2b;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #2a404e;
+    }
+    .logo-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* If you have a real logo, just change the .logo-img content to <img> */
+    .brand-text h1 {
+      color: white;
+      margin-bottom: 4px;
+    }
+    .brand-text .tagline {
+      color: #c49a2b;
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+    .slogan-header {
+      font-size: 1rem;
+      background: rgba(196, 154, 43, 0.15);
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 500;
+      color: #e0e0e0;
+    }
+
+    /* ---------- NAVIGATION ---------- */
+    .nav-bar {
+      background: #1e2e3b;
+      text-align: center;
+      padding: 0.8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .nav-bar a {
+      color: #f0f0f0;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.4rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .nav-bar a:hover {
+      border-bottom-color: #c49a2b;
+      color: #ffffff;
+    }
+
+    /* ---------- MAIN SECTIONS ---------- */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    /* Hero */
+    .hero {
+      background: #f4f7f9;
+      padding: 3rem 2rem;
+      border-radius: 6px;
+      text-align: center;
+      border-left: 6px solid #c49a2b;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Services grid — clean cards */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .service-item {
+      background: #f9fbfc;
+      padding: 1.8rem 1.5rem;
+      border: 1px solid #dde3e8;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+      transition: all 0.15s;
+    }
+    .service-item:hover {
+      border-color: #c49a2b;
+      background: #ffffff;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+    .service-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #0f1c26;
+    }
+    .service-item p {
+      margin-bottom: 0;
+    }
+
+    /* About block */
+    .about-card {
+      background: #f9fbfc;
+      padding: 2rem 2.2rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8ed;
+    }
+    .about-card strong {
+      color: #0f1c26;
+    }
+
+    /* Contact */
+    .contact-panel {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      background: #f4f7f9;
+      padding: 2rem 2rem;
+      border-radius: 8px;
+      align-items: center;
+      border: 1px solid #d0d9e0;
+    }
+    .contact-info {
+      flex: 2 1 280px;
+    }
+    .contact-info p {
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+    }
+    .contact-highlight {
+      background: #1e2e3b;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-align: center;
+      flex: 1 1 200px;
+    }
+    .contact-highlight span {
+      color: #c49a2b;
+    }
+
+    /* Footer */
+    .footer {
+      background: #0f1c26;
+      color: #cccccc;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-top: 4px solid #c49a2b;
+      margin-top: 2rem;
+    }
+    .footer p {
+      color: #bbbbbb;
+      margin-bottom: 0.5rem;
+    }
+    .footer a {
+      color: #c49a2b;
+      text-decoration: none;
+    }
+
+    /* Utility */
+    .text-accent {
+      color: #c49a2b;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 700px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+      .logo-area {
+        flex-direction: column;
+      }
+      .nav-bar a {
+        margin: 0 0.8rem;
+        font-size: 1rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER with real logo placeholder -->
+<header class="header-main">
+  <div class="header-container">
+    <div class="logo-area">
+      <div class="logo-img" aria-label="Carnton Construction Logo">
+        <img src="carnton.png" alt="Carnton Construction Logo">
+      </div>
+      <div class="brand-text">
+        <h1>Carnton Builders</h1>
+        <div class="tagline">Construction & Transport</div>
+      </div>
+    </div>
+    <div class="slogan-header">
+      TOGETHER WE CAN BUILD DREAMS WITH PRECISION AND EXCELLENCE
+    </div>
+  </div>
+</header>
+
+<!-- STICKY NAVIGATION -->
+<nav class="nav-bar">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <!-- HOME -->
+  <section id="home">
+    <div class="container hero">
+      <h2 style="border-bottom: none; display: block; text-align: center;">Building Kaoma · Delivering Zambia</h2>
+      <p>Professional construction and dependable transport services — serving Kaoma, Western Province, and beyond. We combine industry expertise with reliable logistics.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>🏗️ Construction</h3>
+          <p>Residential, commercial, and civil projects. Quality craftsmanship, on schedule.</p>
+        </div>
+        <div class="service-item">
+          <h3>🚛 Transport (Kaoma)</h3>
+          <p>Local haulage, site deliveries, equipment moving within Kaoma district.</p>
+        </div>
+        <div class="service-item">
+          <h3>🗺️ Long‑distance</h3>
+          <p>Transport across Western Province and Zambia — reliable and insured.</p>
+        </div>
+        <div class="service-item">
+          <h3>📦 Material Supply</h3>
+          <p>Aggregate, sand, stone, cement — delivered directly to your site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2>About Carnton Builders</h2>
+      <div class="about-card">
+        <p style="font-size:1.2rem;"><strong>Carnton Builders Construction and Transport</strong> is a Zambian-owned company based in Kaoma, Western Province. We provide integrated construction and transport solutions with a focus on safety, reliability, and professional execution.</p>
+        <p><strong>📍 Headquarters:</strong> Freedom Way, Plot 43, Kaoma, Western Province, Zambia.<br>
+        <strong>👤 Founder & Director:</strong> Carlos Antonio</p>
+        <p>Our team is committed to delivering value — whether it’s a new building, renovation, or moving materials across the region. We take pride in our work and relationships with clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact & location</h2>
+      <div class="contact-panel">
+        <div class="contact-info">
+          <p><strong style="min-width: 90px; display: inline-block;">📞 Phone:</strong> 0973435203  /  0766746206</p>
+          <p><strong style="min-width: 90px; display: inline-block;">✉️ Email:</strong> <a href="mailto:carlosvascoantonio17@gmail.com" style="color:#1a2a3a; text-decoration: underline;">carlosvascoantonio17@gmail.com</a></p>
+          <p><strong style="min-width: 90px; display: inline-block;">📍 Address:</strong> Freedom Way, Plot 43, Kaoma, Western Province, Zambia</p>
+          <p><strong style="min-width: 90px; display: inline-block;">🕒 Hours:</strong> Mon–Sat 7:00 – 18:00</p>
+        </div>
+        <div class="contact-highlight">
+          <span></span> Call our makerting team now to enquire for a free estimate and quotation <span></span><br>
+          <small style="font-size:0.9rem; opacity:0.9;">Serving Kaoma & all Western Province</small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER — copyright as requested, no year -->
+<footer class="footer">
+  <p style="font-size:1rem; letter-spacing:1px;">© CARLOS ANTONIO · Carnton Builders Construction and Transport</p>
+  <p>Freedom Way, Plot 43, Kaoma, Western Province, Zambia</p>
+  <p class="back-to-top"><a href="#home">↑ Back to top</a></p>
+  
+</footer>
+</body>
+</html>
